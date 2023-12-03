@@ -8,7 +8,7 @@ include(pico_sdk_import.cmake)
 
 # Gooey boilerplate
 project(${NAME} C CXX ASM)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 
 # Initialize the SDK
 pico_sdk_init()

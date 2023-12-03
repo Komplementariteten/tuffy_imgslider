@@ -14,11 +14,16 @@ This project is intended as a starting point for working with the Pico SDK and P
 
 It's easier if you make a `pico` directory or similar in which you keep the SDK, Pimoroni Libraries and your projects alongside each other. This makes it easier to include libraries.
 
-## Grab the Pimoroni libraries
+Also the SDK does not support current gcc versions therfore you need to change 
+pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake
+to:
+``` cmake
+set(ARM_TOOLCHAIN_COMMON_FLAGS " -mtune=cortex-m0plus -march=armv6-m -mthumb")
+```
 
-```
-git clone https://github.com/pimoroni/pimoroni-pico
-```
+## Pimoroni libraries
+
+are installed as a submodule
 
 ## Prepare your project
 
